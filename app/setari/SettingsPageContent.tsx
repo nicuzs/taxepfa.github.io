@@ -25,7 +25,7 @@ export default function SettingsPageContent() {
             </Text>
           }
           value={snap.minimumWage}
-          onChange={(val) => (state.minimumWage = val = '' ? 0 : Number(val))}
+          onChange={(val) => (state.minimumWage = val === '' ? 0 : Number(val))}
           error={snap.vatThreshold <= 0 ? 'Scrie o valoare pozitivă' : null}
         />
         <NumberInput
@@ -42,7 +42,7 @@ export default function SettingsPageContent() {
             </Text>
           }
           value={snap.vatThreshold}
-          onChange={(val) => (state.vatThreshold = val = '' ? 0 : Number(val))}
+          onChange={(val) => (state.vatThreshold = val === '' ? 0 : Number(val))}
           error={snap.vatThreshold <= 0 ? 'Scrie o valoare pozitivă' : null}
         />
       </Stack>
